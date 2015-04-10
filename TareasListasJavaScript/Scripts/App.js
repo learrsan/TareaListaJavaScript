@@ -32,6 +32,30 @@ var obtenerElementosUsandoLoad = function ()
             }
             );
 };
+
+var obtenerElementosUsandoLoadQuery = function () {
+    var lista = context.get_web().get_lists().getByTitle("Miscosas");
+    context.load(lista);
+    var items = lista.getItems('');
+    context.loadQuery(items);
+
+    context.executeQueryAsync
+        (
+        function () {
+            var enumeracion = items.getEnumerator();
+
+            while (enumeracion.moveNext()) {
+                var item = enumeracion.get_current();
+                $("#lista").append("<li>" + item.get_item("Title") + "</li>");
+            }
+
+        },
+        function (e) {
+            alert("Error al acceder a los datos" + e.ToString());
+        }
+        );
+};
+
     var addElemento = function(texto) {
         var lista = context.get_web().get_lists().getByTitle("Miscosas");
         context.load(lista);
@@ -49,6 +73,7 @@ var obtenerElementosUsandoLoad = function ()
 
         return {
             getElementosConLoad: obtenerElementosUsandoLoad,
+            getElementosConLoadQuery:obtenerElementosUsandoLoadQuery,
             addItem:addElemento
         
             };
@@ -61,6 +86,8 @@ $(document).ready(function () {
     MisListas.CargarItems().addItem("Tres");
     MisListas.CargarItems().addItem("Cuatro");
     MisListas.CargarItems().getElementosConLoad();
+    //MisListas.CargarItems().getElementosConLoadQuery();
+
 
 });
 
