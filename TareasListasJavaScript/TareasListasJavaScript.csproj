@@ -43,21 +43,21 @@
     <UseVSHostingProcess>false</UseVSHostingProcess>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="Tareas\Elements.xml" />
-    <Content Include="Tareas\Schema.xml" />
-    <Content Include="Tareas\TareasInstance\Elements.xml" />
+    <None Include="Miscosas\MiscosasInstance\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{c9fad17a-a06f-4cb5-8ef5-b150fd6ac768}</SharePointProjectItemId>
+    </None>
+    <None Include="Miscosas\SharePointProjectItem.spdata">
+      <SharePointProjectItemId>{ae3adcd4-3688-40f0-87da-2aa2bd2934bf}</SharePointProjectItemId>
+    </None>
     <None Include="packages.config" />
     <None Include="Pages\SharePointProjectItem.spdata">
       <SharePointProjectItemId>{7e275459-b5be-466c-9c98-5b8608d080ee}</SharePointProjectItemId>
     </None>
+    <Content Include="Miscosas\Elements.xml" />
+    <Content Include="Miscosas\MiscosasInstance\Elements.xml" />
+    <Content Include="Miscosas\Schema.xml" />
     <Content Include="Pages\Elements.xml" />
     <Content Include="Pages\Default.aspx" />
-    <None Include="Tareas\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{caec6af4-63a6-47b8-b952-02e6c4fc0d45}</SharePointProjectItemId>
-    </None>
-    <None Include="Tareas\TareasInstance\SharePointProjectItem.spdata">
-      <SharePointProjectItemId>{e2dd65d5-5ad7-40e3-ac82-71db7534e387}</SharePointProjectItemId>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="Scripts\jquery-1.9.1.min.map" />
