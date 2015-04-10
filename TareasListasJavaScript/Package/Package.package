@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="acfcf432-49a5-4b06-9eb9-863646115ffa" 
+        solutionId="acfcf432-49a5-4b06-9eb9-863646115ffa" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="TareasListasJavaScript"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="6198ccf6-2214-46cc-86a7-c2ec32f1ff3f" />
+  </features>
+</package>
